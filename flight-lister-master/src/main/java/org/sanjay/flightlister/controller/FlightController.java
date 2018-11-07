@@ -29,7 +29,7 @@ public class FlightController {
     @PostMapping(value = "/api/flight", produces = "application/json")
     public List<Flight> getRoute(@Valid @RequestBody FlightRequest flightRequest) throws ExecutionException, InterruptedException {
 
-        logger.info("Received data for flight-lister. Invoking Camel route");
+        logger.info("Received data for  flight-lister. Invoking Camel route");
         List<Flight> flights = flightSearchService.findFlights(flightRequest);
         logger.info("Completed flight-lister request successfully");
 
